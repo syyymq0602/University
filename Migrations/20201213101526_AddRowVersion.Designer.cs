@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ContosoUniversity.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    [Migration("20201213082806_AddRowVersion")]
+    [Migration("20201213101526_AddRowVersion")]
     partial class AddRowVersion
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

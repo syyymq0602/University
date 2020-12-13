@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ContosoUniversity.Migrations
 {
-    public partial class Initial : Migration
+    public partial class AddRowVersion : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -46,7 +46,8 @@ namespace ContosoUniversity.Migrations
                     Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     Budget = table.Column<decimal>(type: "money", nullable: false),
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    InstructorID = table.Column<int>(type: "int", nullable: true)
+                    InstructorID = table.Column<int>(type: "int", nullable: true),
+                    RowVersion = table.Column<byte[]>(type: "rowversion", rowVersion: true, nullable: true)
                 },
                 constraints: table =>
                 {
